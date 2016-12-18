@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hello World, AngularJS</title>
+	<script type="text/javascript"
+		src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
+
+		
+</head>
+<body >
+
+<div ng-app="" ng-init="names =[
+{name:'chris',country:'usa'},
+{name:'sherry',country:'usa'}
+]">
+	<ul>
+		<li ng-repeat ='x in names'>
+		{{x.name + ',' + x.country}}
+	</ul>
+</div>
+	
+</body>
+</html>
