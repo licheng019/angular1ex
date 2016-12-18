@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<script src="https://code.angularjs.org/1.5.9/angular.min.js"></script>
+</head>
+<body>
+
+<div ng-app="myApp" ng-controller="siteCtrl"> 
+{{message}}
+{{status}}
+</div>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('siteCtrl', function($scope, $http) {
+  $http.get("data.php")
+  .success(function (data, status) {
+	$scope.message = data;
+	$scope.status = status;
+	}).error(function(){
+	
+	});
+});
+</script>
+
+</body>
+</html>

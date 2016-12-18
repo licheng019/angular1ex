@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<script src="https://code.angularjs.org/1.5.9/angular.min.js"></script>
+</head>
+<body ng-app = "myApp">
+<div ng-controller="firstCtrl"> 
+	{{name}}
+	{{age}}
+</div>
+
+<div ng-controller="secondCtrl"> 
+	{{name}}
+	{{age}}
+</div>
+<script>
+var app = angular.module('myApp', []);
+app.controller('firstCtrl', function($scope, $rootScope) {
+	$scope.name = "firstCtrl";
+});
+app.controller('secondCtrl', function($scope, $rootScope) {
+	//$scope.name = "secondCtrl";
+	$rootScope.age = 40;
+});
+</script>
+
+</body>
+</html>
